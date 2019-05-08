@@ -1,0 +1,13 @@
+<hello></hello>
+
+<textbox-list name="ordered" [(items)]="items1" [readOnly]="false"></textbox-list>
+
+<textbox-list name="unordered" [(items)]="items2" [readOnly]="false" listStyle="ul"></textbox-list>
+
+<div>
+{{items1 | json}}
+</div>
+
+<div>
+{{items2 | json}}
+</div>

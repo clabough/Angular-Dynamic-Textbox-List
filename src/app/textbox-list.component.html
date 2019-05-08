@@ -1,0 +1,15 @@
+<ol *ngIf="listStyle != 'ul'">
+	<li *ngFor="let item of rowItems; let index = index; trackBy: trackByFn">
+		<input class="form-control text-item" type="text" id="{{ name }}{{ index }}" [(ngModel)]="rowItems[index]" (keyup.enter)="addItem($event, index)" (blur)="blurred(index)" *ngIf="!readOnly" />
+    <span class="show-on-focus" *ngIf="item">press Enter for new item</span>
+		<ng-container *ngIf="readOnly">{{ rowItems[index] }}</ng-container>
+	</li>
+</ol>
+<ul *ngIf="listStyle == 'ul'">
+	<li *ngFor="let item of rowItems; let index = index; trackBy: trackByFn">
+		<input class="form-control text-item" type="text" id="{{ name }}{{ index }}" [(ngModel)]="rowItems[index]" (keyup.enter)="addItem($event, index)" (blur)="blurred(index)" *ngIf="!readOnly" />
+    <span class="show-on-focus" *ngIf="item">press Enter for new item</span>
+		<ng-container *ngIf="readOnly">{{ rowItems[index] }}</ng-container>
+	</li>
+</ul>
+
