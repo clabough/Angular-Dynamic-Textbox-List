@@ -12,7 +12,7 @@ Parameters:
 
 	[listStyle] : "ul" or "ol" (default "ol")
 	[name] : element name (default is new Date().getTime().toString())
-	[readOnly] : *true* = display text for each item; *false* = use textbox for each item
+	[readOnly] : true = display text for each item; false = use textbox for each item
 	[(items)] : string array of list items
 	(itemsChange) : string array of list items
 
